@@ -10,6 +10,9 @@ Welcome to The Office's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+Workspace
+---------
+.. image:: _static/workspace.jpg
 
 
 Indices and tables
