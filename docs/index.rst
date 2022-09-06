@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the-office's documentation!
+Welcome to The Office's documentation!
 ======================================
+
+Explore The Office documentation by browsing the different modules.
 
 .. toctree::
    :maxdepth: 2
