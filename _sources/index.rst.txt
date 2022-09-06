@@ -15,6 +15,8 @@ Workspace
 
 .. image:: _static/python.jpg
 
+No better picture exists
+
 Indices and tables
 ==================
 
