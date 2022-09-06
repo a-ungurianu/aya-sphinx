@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="office module" href="office.html" /><link rel="prev" title="the-office" href="modules.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="employee module" href="employee.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>employee module - The Office documentation</title>
+        <title>office module - The Office documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -146,11 +146,11 @@
       <div class="sidebar-sticky">
 <h3>Branches</h3>
 <ul>
-  <li><a href="../10-automating-versioning/employee.html">10-automating-versioning</a></li>
+  <li><a href="office.html">10-automating-versioning</a></li>
 </ul>
 <h3>Tags</h3>
 <ul>
-  <li><a href="employee.html">v0.0.1</a></li>
+  <li><a href="../v0.0.1/office.html">v0.0.1</a></li>
 </ul>
 
       </div>
@@ -181,22 +181,41 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-employee">
-<span id="employee-module"></span><h1>employee module<a class="headerlink" href="#module-employee" title="Permalink to this heading">#</a></h1>
+          <section id="module-office">
+<span id="office-module"></span><h1>office module<a class="headerlink" href="#module-office" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="employee.Employee">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">employee.</span></span><span class="sig-name descname"><span class="pre">Employee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job_title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#employee.Employee" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="office.TheOffice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">office.</span></span><span class="sig-name descname"><span class="pre">TheOffice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regional_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">employees</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><span class="pre">Employee</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#office.TheOffice" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class for keeping track of employee details.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="employee.Employee.job_title">
-<span class="sig-name descname"><span class="pre">job_title</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#employee.Employee.job_title" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dl class="simple">
+<dt>A class representing an office that holds information about its employees and their sales.</dt><dd><p>It exposes methods make and view sales for each employee.</p>
+</dd>
+<dt>Args:</dt><dd><p>regional_manager (str): The name of the employee.
+employees (Set[Employee]): A set of employee objects.
+location (str): The name of the region the office is located.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="office.TheOffice.get_employee_sales">
+<span class="sig-name descname"><span class="pre">get_employee_sales</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">employee</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><span class="pre">Employee</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#office.TheOffice.get_employee_sales" title="Permalink to this definition">#</a></dt>
+<dd><p>Method that returns the number of sales given an employee.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>employee (Employee): The employee whose sales number we are interested in.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The total number of sales the employee has made.</p>
+</dd>
+</dl>
+</dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="employee.Employee.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#employee.Employee.name" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="office.TheOffice.record_sale">
+<span class="sig-name descname"><span class="pre">record_sale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">employee</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><span class="pre">Employee</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#office.TheOffice.record_sale" title="Permalink to this definition">#</a></dt>
+<dd><p>Method that adds a sale to the employee key of the sales dict.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>employee (Employee): The <cite>employee</cite> who has made the sale.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -207,23 +226,15 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="office.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">office module</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="modules.html">
+          
+          <a class="prev-page" href="employee.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">the-office</div>
+                <div class="title">employee module</div>
                 
               </div>
             </a>
