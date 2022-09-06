@@ -19,10 +19,18 @@ sys.path.insert(0, os.path.abspath('..'))
 
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'sphinx_multiversion'
 ]
 
-templates_path = ['_templates']
+templates_path = [
+    "_templates",
+]
+html_sidebars = {
+    '**': [
+        'versioning.html',
+    ],
+}
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
